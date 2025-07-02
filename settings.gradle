@@ -1,19 +1,14 @@
 pluginManagement {
     repositories {
-        mavenLocal()
+        mavenCentral()
         gradlePluginPortal()
         maven { url = 'https://maven.neoforged.net/releases' }
-        forRepository {
-            maven {
-                url "https://cursemaven.com"
-            }
-        }
-        filter {
-            includeGroup "curse.maven"
-        }
+        maven { url 'https://cursemaven.com' }
+        
     }
 }
 
 plugins {
     id 'org.gradle.toolchains.foojay-resolver-convention' version '0.9.0'
+    
 }
